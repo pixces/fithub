@@ -8,8 +8,6 @@ $(document).ready(function(){
 		$("#pageloader").delay(50).fadeOut("slow");
 	}); 
 
-
-
 	/* Link Transition */
 	$("a.linkz_transition").click(function(event){
         event.preventDefault();
@@ -300,8 +298,6 @@ $(document).ready(function(){
 		//className: 'navopacity'
 	});
 
-
-
 	/* One Page Navigation */
 	$('.nav').onePageNav({
 	    currentClass: 'current',
@@ -312,9 +308,11 @@ $(document).ready(function(){
 	    easing: 'swing',
 	    begin: function() {
 	        //I get fired when the animation is starting
+			$('body').append('<div id="device-dummy" style="height: 1px;"></div>');
 	    },
 	    end: function() {
 	        //I get fired when the animation is ending
+			$('#device-dummy').remove();
 	    },
 	    scrollChange: function($currentListItem) {
 	        //I get fired when you enter a section and I pass the list item of the section

@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Fitout Hub Interiors</title>
-
 		<!-- CSS Files
 			========================================================================= -->
 		<link href="css/reset.css" rel="stylesheet">
@@ -48,7 +47,7 @@
 								 <video class="video-background" muted autoplay loop>
 									<source type="video/mp4" src="videos/dubai_2013.mp4" >
 								</video>
-								<div class="col-lg-7 col-md-7 col-sm-7 item-column-logo">
+								<div class="col-lg-7 col-md-7 col-sm-12 item-column-logo">
 									<img class="img-responsive" src="img/fitout_large_logo.png" width="150">
 									<div class="introText">
 										<span class="smallText">
@@ -59,7 +58,7 @@
 										</span>
 									</div>
 								</div>
-								<div id="intro-form" class="col-lg-5 col-md-5 col-sm-5 item-column-content extra-top-50 text-center">
+								<div id="intro-form" class="col-lg-5 col-md-5 col-sm-12 item-column-content extra-top-50 text-center">
 									<!-- Register Form -->
 									<form name="registration-form" class="row" method="post">
 										<h4 class="blink_me">contact us for a free quote!</h4>
@@ -483,29 +482,6 @@
 			</div>
 			<div class="section_content portfolio_section">
 				<div id="portfolioGallery"></div>
-				<!--
-				<div class="portfolio_navigation text-center">
-					<ul class="portfolio_navigation_list">
-						<li ng-repeat="category in portfolioTitleList track by $index">
-							<a href="#" data-filter="{{category.filter}}" ng-class='{active:$first}'>{{category.title}}</a>
-						</li>
-					</ul>
-				</div>
-				<div class="portfolio_items">
-					<div ng-repeat="items in prortfolioItems track by $index" class="portfolio_item {{items.tags}}">
-						<img src="images/portfolio/thumb/tn_{{items.image}}" alt="{{items.title}}">
-						<a href="images/portfolio/{{items.image}}" rel="prettyPhoto">
-							<div class="portfolio_item_info text-center">
-								<div class="portfolio_item_title">{{items.title}}</div>
-								<i class="portfolio_item_sep background_color"></i>
-								<div class="portfolio_item_p">
-									{{items.caption}} ...
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				-->
 			</div>
 		</section>
 
@@ -574,12 +550,6 @@
 				<div class="row" style="padding-top: 25px">
 					<div class="container">
 						<div class="col-md-6 contact_content_left">
-							<div class="content_big_title">
-								Send us <span class="text_color">a message</span>
-							</div>
-							<div class="contact_small_text">
-								Lorem ipsum dolor sit consectetur adipisicing elit eiusmod tempor incididunt.
-							</div>
 							<form name="contact_form" method="post" action="" class="contact_form">
 								<div class="row">
 									<div class="col-md-6">
@@ -599,12 +569,6 @@
 							</form>
 						</div>
 						<div class="col-md-4 col-md-offset-2">
-							<div class="content_big_title">
-								Get in <span class="text_color">touch</span>
-							</div>
-							<div class="contact_small_text">
-								You can also contact us at
-							</div>
 							<div class="contact_right_details">
 								<div class="address">
 									<span>Al Qusais Industrial Area, Dubai, UAE</span>
@@ -617,10 +581,6 @@
 								<div class="">
 									<span><a href="mailto:support@fitouthubme.com" class="link_hoverw">support@fitouthubme.com</a></span>
 								</div>
-							</div>
-
-							<div class="content_big_title">
-								Follow <span class="text_color">Us</span>
 							</div>
 							<div class="follow_us">
 								<a target="_blank" href="https://www.facebook.com/fitouthub" class="follow_us_btn "><i class="fa fa-facebook"></i> </a>
@@ -641,9 +601,14 @@
 		<footer>
 		<div class="footer3">
 			<div class="container text-center">
-				<div>
-					<p>&copy; <span class="text_color">FITOUTHUB.COM</span> &nbsp;&nbsp;All Rights Reserved &mdash; <a href="">Privacy Policy</a> &middot; <a href="">Terms & Conditions</a><p>
-					<p class="small">Campaign managed by <a href="http://innoveins.com" target="_blank"><b>Innoveins</b></a></p>
+				<div class="row">
+					<p class="col-md-12">
+						<span class="col-lg-6 col-sm-12">&copy; <span class="text_color">FITOUTHUB.COM</span> &nbsp;&nbsp;All Rights Reserved.</span>
+						<span class="col-lg-6 col-sm-12"><a href="">Privacy Policy</a> &middot; <a href="">Terms & Conditions</a></span>
+					<p>
+					<p class="col-md-12 small">
+						<span class="col-md-12">Campaign managed by <a href="http://innoveins.com" target="_blank"><b>Innoveins</b></a></span>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -720,8 +685,9 @@
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
 		<script src="js/vendors/gmap3.min.js"></script>
 
-		<!-- jQuery code for Masonry Blog -->
-		<script src="js/vendors/script_masonryb.js"></script>
+		<!-- jQuery code for Masonry Blog
+		<script src="js/vendors/script_masonryb.js"></script> -->
+
 
 		<!-- jQuery code for Masonry Blog -->
 		<script src="js/vendors/jquery.nanogallery.js"></script>

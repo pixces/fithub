@@ -8,7 +8,7 @@ class Database
             return self::$instance;
         }
 
-        $iniFile = __DIR__ . "/config.ini";
+        $iniFile = __DIR__ . "/config.dev.ini";
         $ini_parsed = parse_ini_file($iniFile,true);
 
         $driver = $ini_parsed [ "db_driver" ] ;
