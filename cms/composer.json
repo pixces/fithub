@@ -1,0 +1,13 @@
+{
+    "name": "fitout/cms",
+    "description": "Admin Area",
+    "authors": [
+        {
+            "name": "Zainul Abdeen",
+            "email": "pixces@gmail.com"
+        }
+    ],
+    "require": {
+        "verot/class.upload.php": "dev-master"
+    }
+}

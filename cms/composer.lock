@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "9750b6e63dd5494dd7806ff5a05aa8a0",
+    "content-hash": "e3b2a89a2b20107acce956dd1b24216a",
+    "packages": [
+        {
+            "name": "verot/class.upload.php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verot/class.upload.php.git",
+                "reference": "62bc7ec3b18f2a3eb7eb99e4feca843b2481a41b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/62bc7ec3b18f2a3eb7eb99e4feca843b2481a41b",
+                "reference": "62bc7ec3b18f2a3eb7eb99e4feca843b2481a41b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/class.upload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Colin Verot",
+                    "email": "colin@verot.net"
+                }
+            ],
+            "description": "This PHP class uploads files and manipulates images very easily.",
+            "homepage": "http://www.verot.net/php_class_upload.htm",
+            "keywords": [
+                "gd",
+                "upload"
+            ],
+            "time": "2016-04-11 21:46:02"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "verot/class.upload.php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

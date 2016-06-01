@@ -438,5 +438,10 @@ $(document).ready(function(){
 		})
 	});
 	
+	$(".navbar-nav li").click(function(){
+		$("#bs-example-navbar-collapse-1").removeClass("in");
+		$("#bs-example-navbar-collapse-1").css("height","1px");
+	});
+	
 
 });

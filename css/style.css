@@ -3,8 +3,10 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 
 body {
-	overflow:hidden;
+	/* overflow:hidden; */
+	overflow-x: hidden;
 	background: #2A2A2A;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* Initial font */
@@ -121,7 +123,7 @@ button{
 .navbar-topaz{
 	background-color: black;
 	background-image: none;
-	opacity: 1;
+	opacity: 0.95;
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
@@ -168,7 +170,7 @@ button{
 }
 
 .navopacity{
-	opacity: 1;
+	opacity: 0.9;
 }
 
 
@@ -1457,7 +1459,7 @@ section{
 	font-size: 14px;
 }
 
-/* Blog
+/* Blog */
 #blog{
 	margin-bottom: 75px;
 }
@@ -1726,7 +1728,7 @@ section{
 }
 
 
-/* Blog Side Bar
+/* Blog Side Bar */
 .widget {
 	margin-bottom: 55px;
 }
@@ -1779,12 +1781,12 @@ section{
 }
 
 
-/* Categories Widget
+/* Categories Widget */
 .categories a{
 	font-size: 12px;
 }
 
-/* Tags Widget
+/* Tags Widget */
 .tags_widget ul li {
 	float: left;
 	margin: 0 4px 4px 0;
@@ -1802,10 +1804,9 @@ section{
 	transition: background 0.2s linear;
 }
 
-*/
 
 
-/* Audio Player
+/* Audio Player */
 div.jp-audio,div.jp-audio-stream,div.jp-video {
     font-size: 1.25em;
     line-height: 1.6;
@@ -2300,7 +2301,7 @@ div.jp-volume-bar-value {
 }
 
 
-/* Quote for the blog
+/* Quote for the blog */
 .blog_content_quote{
 	background-color: #dbdbdb;
 	font-size: 26px;
@@ -2322,7 +2323,7 @@ div.jp-volume-bar-value {
 }
 
 
-/* Load More BTN
+/* Load More BTN */
 .more_blog_btn{
 	text-decoration: none;
 	font-size: 14px;
@@ -2333,9 +2334,9 @@ div.jp-volume-bar-value {
 	color: white;
 	background-image: none;
 }
-*/
 
-/* Subscribe Form
+
+/* Subscribe Form */
 .subscribe_form_input{
 	border: solid 1px #c7c7c7;
 	color: #747474;
@@ -2369,7 +2370,6 @@ div.jp-volume-bar-value {
 	background-color: white;
 	padding: 20px 45px;
 }
-*/
 
 /* Contact Us Block */
 .contact_form{
@@ -2562,7 +2562,7 @@ div.jp-volume-bar-value {
 }
 
 
-/* featured On Section
+/* featured On Section */
 #featured_section{
 	background: url(../img/bg2.jpg) no-repeat 0 0 fixed;
 	width:100%;
@@ -2585,9 +2585,8 @@ div.jp-volume-bar-value {
 	padding: 0px 25px;
 	display: inline-block;
 }
- */
 
-/* Tweet Section
+/* Tweet Section */
 #tweet_section{
 	background: url(../img/bg3.jpg) no-repeat 0 0 fixed;
 	width:100%;
@@ -2601,9 +2600,8 @@ div.jp-volume-bar-value {
 	margin-top: 60px;
 	margin-bottom: 20px;
 }
- */
 
-/* Buy Theme Section
+/* Buy Theme Section */
 #buy_section{
 	background: url(../img/bg4.jpg) no-repeat 0 0 fixed;
 	width:100%;
@@ -2704,10 +2702,13 @@ div.jp-volume-bar-value {
 #twitterfeed .tweet_text{
 	color: white;
 }
- */
 
 
-/* Project 1
+
+
+
+
+/* Project 1 */
 .project_1_p{
 	font-size: 14px;
 	color: #505050;
@@ -2761,7 +2762,7 @@ div.jp-volume-bar-value {
 }
 
 
-/* Project 2
+/* Project 2 */
 #project_2 .section_content{
 	margin-top: 35px;
 }
@@ -2793,7 +2794,7 @@ div.jp-volume-bar-value {
 	font-size: 12px;
 }
 
-/* Project 3
+/* Project 3 */
 .project_3_details{
 	font-size: 12px;
 	line-height: 25px;
@@ -2840,7 +2841,6 @@ div.jp-volume-bar-value {
 	font-size: 14;
 	color: #505050;
 }
-*/
 
 /* Portfolio 5*/
 .top-item5{
@@ -2878,7 +2878,7 @@ div.jp-volume-bar-value {
 	margin-top: 200px;
 }
 
-/* Subscribe message
+/* Subscribe message */
 .subscribe_message{
 	font-size: 30px;
 }
@@ -2886,9 +2886,9 @@ div.jp-volume-bar-value {
 .subscribe_message .fa{
 	margin-right: 10px;
 }
-*/
 
-/* Subscribe 2
+
+/* Subscribe 2 */
 #subscribe2{
 	background: url(../img/bg9.jpg) no-repeat 0 0 fixed;
 	width:100%;
@@ -2939,7 +2939,7 @@ div.jp-volume-bar-value {
 	color: white;
 }
 
-/* Buy Section
+/* Buy Section */
 .buy_content{
 	margin: 85px 0;
 }
@@ -2951,7 +2951,7 @@ div.jp-volume-bar-value {
 }
 
 
-/* Contact 2 Section
+/* Contact 2 Section */
 .contact2_form_block{
 	width: 775px;
 	margin: 0 auto;
@@ -2981,7 +2981,7 @@ div.jp-volume-bar-value {
 .contact2_social{
 	margin-top: 45px;
 }
-*/
+
 
 
 /* Contact 3 section */
@@ -3993,7 +3993,7 @@ div.jp-volume-bar-value {
 	background-color: #FFF;
 }
 
-/* registration form == */
+/* registration form */
 
 #intro-form form{
 	background-color: rgba(20, 20,20, 0.65);
@@ -4402,8 +4402,9 @@ video{
 @media only screen and (max-width : 360px) {
 
 	.introText{
-		padding-top: 15px;
+		padding-top: 35px !important;
 		padding-bottom: 15px;
+
 	}
 
 	.introText span.heroText {
@@ -4421,6 +4422,7 @@ video{
 
 	.item-column-logo img{
 		width: 100px !important;
+		display:none;
 	}
 
 	.item-column-content{
@@ -4505,6 +4507,10 @@ video{
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+
+	.owl-buttons{
+		display: none !important;
+	}
 
 	.introText{
 		padding-top: 15px;
@@ -5068,4 +5074,20 @@ video{
 		margin:0 2%;
 		left:0;
 	}
+	#mainbanner video{
+		display:none !important;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 4000px){
+	#mainbanner .slides_item1,
+	#mainbanner .slides_item2{
+		background:url("../img/pattern.png") repeat !important;
+	}
+}
+#mainbanner .slides_item1{
+	background:url(../img/image1.jpg) no-repeat top center / cover !important;
+}
+#mainbanner .slides_item2{
+	background:url(../img/image2.jpg) no-repeat top left / cover !important;
 }
