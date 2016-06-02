@@ -47,4 +47,58 @@ class Home extends Controller
         require APP . 'view/home/example_two.php';
         require APP . 'view/_templates/footer.php';
     }
+
+    public function login(){
+
+        if (isset($_POST['admin_login'])){
+
+            try{
+
+                $credentials = array(
+                    'email' => $_POST['email'],
+                    'password' => $_POST['password']
+                );
+
+                $this->check($_POST);
+
+                //redirect to home page
+                header('location: ' . URL . 'home/index');
+
+            } catch (Exception $e){
+                $this->setFlash('error', $e->getMessage());
+            }
+        }
+
+        //validate and create auth details
+        require APP . 'view/home/login.php';
+    }
+
+    public function logout(){
+        //unset the auth details
+        Auth::remove();
+        header('location: ' . URL . 'home/login');
+
+    }
+
+    private function check(array $credentials){
+
+        $email = $credentials['email'];
+        $password = $credentials['password'];
+
+        //check if user exits
+        $objUser = $this->model->findUser($email);
+
+        if ($objUser == false){
+            throw new Exception("Invalid email");
+        }
+
+        //check for password
+        if( md5($password) != $objUser[0]->password ){
+            throw new Exception("Incorrect password.");
+        }
+
+        //login this user now
+        Auth::registerSession($objUser[0]);
+        return true;
+    }
 }

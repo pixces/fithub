@@ -66,6 +66,29 @@ class Model
         );
     }
 
+    public function getById($id){
+        $sql = "SELECT * FROM " . $this->_table . " WHERE id = :id " ;
+        $query = $this->db->prepare($sql);
+        $params = array(':id' => $id);
+        $query->execute($params);
+        return $query->fetch();
+    }
+
+    public function findByField(array $list){
+        $whrCls = [];
+        $values = [];
+
+        foreach($list as $field => $value){
+            $whrCls[] = "`". $field . "` = :" . $field;
+            $values[':'.$field] = $value;
+        }
+        $sql = "SELECT * FROM " . $this->_table . " WHERE " . implode(' AND ', $whrCls);
+        $query = $this->db->prepare($sql);
+        $query->execute($values);
+
+        return $query->fetchAll();
+    }
+
     protected function _describe(){
         if (!$this->_describe) {
             $this->_describe = array();
@@ -94,7 +117,6 @@ class Model
                 $values[":".$field] = $data[$field];
             }
         }
-
         try{
             $sql = "INSERT INTO " . $this->_table . " ( " . implode(',', $fields) . " ) VALUE ( " . implode(',', array_keys($values)) .")";
             $query = $this->db->prepare($sql);
@@ -105,10 +127,23 @@ class Model
         }
     }
 
+    public function getAlbum($id){
+        $this->setTable('portfolios');
+        $album = $this->getById($id);
+        //get album category
+        $category = $this->getById($album->parent_id);
+        $album->category = $category->title;
+        return $album;
+    }
+
     public function addAlbum($data){
         $this->_describe();
-        $data['parent_id'] = (isset($data['category'])) ? $data['category'] : 0;
-        $data['type'] = 'album';
+        if (!$data['parent_id']){
+            $data['parent_id'] = (isset($data['category'])) ? $data['category'] : 0;
+        }
+        if (!$data['type']){
+            $data['type'] = 'album';
+        }
         $data['date_created'] = date('Y-m-d h:i:s');
 
         try{
@@ -119,6 +154,29 @@ class Model
         }
     }
 
+    public function getAlbumImages($albumId = null){
+        $this->setTable('portfolios');
+        $images = $this->findByField(array(
+            'parent_id' => $albumId
+        ));
+
+        return array(
+            'count' => count($images),
+            'data' => $images
+        );
+    }
+
+    public function getImages($albumId = null){
+
+    }
+    public function findUser($email){
+        $this->setTable('users');
+        $userObj = $this->findByField(array(
+            'username' => $email
+        ));
+
+        return $userObj;
+    }
 
 
     /**

@@ -12,13 +12,33 @@ class Controller
      */
     public $model = null;
 
+    protected $controller;
+
+    protected $action;
+
     /**
      * Whenever controller is created, open a database connection too and load "the model".
+     * @param $controller
+     * @param $action
      */
-    function __construct()
+    function __construct($controller, $action)
     {
+        $this->controller = $controller;
+        $this->action = $action;
+
         $this->openDatabaseConnection();
         $this->loadModel();
+
+        if (!Auth::isAuthenticated()){
+            if (( $this->controller != 'home' ) || (!in_array($this->action,array('login','logout'))))
+            {
+                header('location: ' . URL . 'home/login');
+            }
+        } else {
+            if ($this->action == 'login'){
+                header('location: ' . URL . 'home/index');
+            }
+        }
     }
 
     /**
@@ -61,6 +81,4 @@ class Controller
     public function hasFlash($level){
 
     }
-
-
 }
