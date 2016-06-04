@@ -5,7 +5,7 @@
 var App = angular.module('fitoutApp',[]);
 
 App.controller('StatsController',['$scope','$http',function($scope,$http){
-    $scope.stats = [{"title" : "Cheaper", "value": 36},{"title" : "Faster", "value" : 76},{"title": "In House Assistance", "value" : 101},{"title" : "Value for Money", "value" : 101},{"title" : "Rejection in Authroity Approvals", "value" : 0},{"title" : "Defect Policy", "value" : 0},{"title" : "In-House Design", "value" : 100}];
+    $scope.stats = [{"title" : "Cheaper", "value": 36},{"title" : "Faster", "value" : 76},{"title": "In House Assistance", "value" : 101},{"title" : "Value for Money", "value" : 101},{"title" : "Rejection in Authroity Approvals", "value" : 0},{"title" : "Defect Free Policy", "value" : 101},{"title" : "Innovative Design", "value" : 101},{"title" : "Customer Satisfaction", "value" : 101}];
 }]);
 
 App.controller('AchievementController',['$scope','$http',function($scope,$http){

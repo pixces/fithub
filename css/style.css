@@ -398,7 +398,7 @@ button{
 }
 
 .introText span.smallText{
-	font-size: 12px;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: #B2B2B2;
 
@@ -406,7 +406,7 @@ button{
 
 .introText span.heroText{
 	font-family: 'Oswald', sans-serif;
-	font-size: 50px;
+	font-size: 40px;
 	color: #FFFFFF;
 	font-weight: 700;
 	text-wrap: none;
@@ -2376,7 +2376,7 @@ div.jp-volume-bar-value {
 	margin-top: 20px;
 }
 
-.conact_form_name, .conact_form_email{
+.conact_form_name, .conact_form_email, .conact_form_phone{
 	width: 100%;
 	padding: 10px;
 	border: solid 1px #929292;
@@ -2385,39 +2385,7 @@ div.jp-volume-bar-value {
 	font-style: italic;
 }
 
-.conact_form_name::-webkit-input-placeholder {
-	color: #525252;
-}
-
-.conact_form_name:-moz-placeholder { /* Firefox 18- */
-	color: #525252;
-}
-
-.conact_form_name::-moz-placeholder {  /* Firefox 19+ */
-	color: #525252;
-}
-
-.conact_form_name:-ms-input-placeholder {
-	color: #525252;
-}
-
-.conact_form_email::-webkit-input-placeholder {
-	color: #525252;
-}
-
-.conact_form_email:-moz-placeholder { /* Firefox 18- */
-	color: #525252;
-}
-
-.conact_form_email::-moz-placeholder {  /* Firefox 19+ */
-	color: #525252;
-}
-
-.conact_form_email:-ms-input-placeholder {
-	color: #525252;
-}
-
-.contact_form_message_block{
+.contact_form_message_block, .contact_form_phone_block{
 	margin-top: 20px;
 }
 
@@ -2429,18 +2397,6 @@ div.jp-volume-bar-value {
 	font-size: 14px;
 	font-style: italic;
 	height: 180px;
-}
-
-.contact_form_message::-webkit-input-placeholder {
-	color: #525252;
-}
-
-.contact_form_message:-moz-placeholder { /* Firefox 18- */
-	color: #525252;
-}
-
-.contact_form_message::-moz-placeholder {  /* Firefox 19+ */
-	color: #525252;
 }
 
 .contact_form_message:-ms-input-placeholder {
@@ -2459,6 +2415,12 @@ div.jp-volume-bar-value {
 
 .contact_form_btn_block{
 	margin-top: 20px;
+}
+
+.form_error{
+    padding: 10px;
+    font-size: 15px;
+    color: #FF0000;
 }
 
 .contact_message{
@@ -3204,12 +3166,12 @@ div.jp-volume-bar-value {
 }
 
 .service_3 .service_icon{
-	font-size: 60px;
+	/*font-size: 60px;
 	width: 80px;
 	height: 80px;
 	text-align: center;
 	display: inline-block;
-	position: relative;
+	position: relative;*/
 	padding-top: 35px;
 }
 
@@ -4017,7 +3979,7 @@ div.jp-volume-bar-value {
 }
 
 
-#intro-form form .form_bnt{
+#intro-form form .quote_bnt{
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
@@ -4390,6 +4352,21 @@ video{
 	width: 100%;
 	position: absolute;
 }
+
+.btn-download .fa{
+	display: inline-block !important;
+}
+
+.btn-download{
+	color: #fff;
+	background-color: #ec9c35;
+	border-color: #ec9c35;
+}
+
+.btn-download:hover {
+	color: #ec9c35 !important;
+}
+
 /* Gallery Css Ends Here */
 
 
@@ -4667,13 +4644,20 @@ video{
 /* Small Devices, Tablets */
 @media only screen and (min-width : 720px) {
 
+	.introText span.smallText{
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #B2B2B2;
+
+	}
+
 	.introText{
 		padding-top: 50px;
 		padding-bottom: 15px;
 	}
 
 	.introText span.heroText {
-		font-size: 65px;
+		font-size: 40px;
 	}
 
 	.navbar {

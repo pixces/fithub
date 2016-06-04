@@ -56,7 +56,7 @@ nanoGALLERY v5.10.1 release notes.
 ;(function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module depending on jQuery.
-		define('jqueryNanoGallery', ['jquery', 'ngTweenable'], factory);
+		define('jqueryNanoGallery', ['jquery.nav', 'ngTweenable'], factory);
 	}
 	else {
     // No AMD. Register plugin with global jQuery object.

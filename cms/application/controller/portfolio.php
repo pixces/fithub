@@ -136,7 +136,7 @@ class Portfolio extends Controller
         }
 
         try{
-            $data = [];
+            $data = array();
 
             $files = array();
             foreach ($_FILES['images'] as $k => $l) {

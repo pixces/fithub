@@ -64,14 +64,14 @@ a:hover{
 	background-color: #333333;
 }
 
-#intro-form form .form_bnt{
+#intro-form form .quote_bnt{
 	border: solid 1px #ec9c35;
 	color: white;
 	background-color: #ec9c35;
 	border-radius: 5px;
 }
 
-#intro-form form .form_bnt:hover{
+#intro-form form .quote_bnt:hover{
 	border: solid 1px #333333;
 	color: #ec9c35;
 	background-color: #333333;

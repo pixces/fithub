@@ -370,22 +370,93 @@ $(document).ready(function(){
 	/* Video Player */
 	$(".player").mb_YTPlayer();
 
-
 	// validate and process contact form
-	$(".contact_btn").click(function() { 
-		
-		var name = $("input#name").val();  
+	$(".contact_btn").click(function() {
+
+		$("#contact_error").hide();
+
+		var name = $("input#name").val();
 		var email = $("input#email").val();
-		var message = $("textarea#message").val(); 
-		var dataString = 'name='+ name + '&email=' + email + '&message=' + message;
-		
-		//alert (dataString);//return false;  
+		var message = $("textarea#message").val();
+		var phone = $("input#phone").val();
+
+		var error = false;
+		var errorText;
+		var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+
+		if (!name){
+			errorText = "Name is mandatory to be filled.";
+			error = true;
+		} else if ( (!email) || !re.test(email) ){
+			errorText = "Enter a valid email address.";
+			error = true;
+		} else if (!phone){
+			errorText = "Phone number is mandatory to be filled.";
+			error = true;
+		} else if ( (!message) || (message.length < 15)) {
+			errorText = "Enter a poper message.";
+			error = true;
+		}
+
+		if (error){
+			$('.contact_form').prepend("<div id='contact_error' class='form_error'> " + errorText + "</div>");
+			return false;
+		}
+
+		var dataString = 'name='+ name + '&email=' + email + '&message=' + message  + '&phone=' + phone ;
+		//alert (dataString); return false;
+
+		$.ajax({
+			type: "POST",
+			url: "services/contact_mail.php",
+			data: dataString,
+			success: function() {
+				$('.contact_form').html("<div class='contact_message text_color'>Contact Form Submitted!</div>");
+
+			}
+		});
+		return false;
+
+	});
+
+	// validate and process Quote form
+	$(".quote_bnt").click(function() {
+
+		$("#quote_error").hide();
+
+		var name = $("input#quoteName").val();
+		var email = $("input#quoteEmail").val();
+		var phone = $("input#quotePhone").val();
+
+		var error = false;
+		var errorText;
+		var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+
+		if (!name){
+			errorText = "Name is mandatory to be filled.";
+			error = true;
+		} else if ( (!email) || !re.test(email) ){
+			errorText = "Enter a valid email address.";
+			error = true;
+		} else if (!phone){
+			errorText = "Phone number is mandatory to be filled.";
+			error = true;
+		}
+
+		if (error){
+			$('.quote_form').prepend("<div id='quote_error' class='form_error'> " + errorText + "</div>");
+			return false;
+		}
+
+		var dataString = 'name='+ name + '&email=' + email + '&message=' + message  + '&phone=' + phone ;
+		//alert (dataString); return false;
+
 		$.ajax({  
 		  type: "POST",  
-		  url: "mailer.php",  
+		  url: "services/quote_mail.php",
 		  data: dataString,  
 		  success: function() { 
-			$('.contact_form').html("<div class='contact_message text_color'>Contact Form Submitted!</div>");
+			$('.quote_form').html("<div class='contact_message text_color'>Quote Submitted! We will get back to you soon.</div>");
 			  
 		  }
 		});  

@@ -75,8 +75,8 @@ class Model
     }
 
     public function findByField(array $list){
-        $whrCls = [];
-        $values = [];
+        $whrCls = array();
+        $values = array();
 
         foreach($list as $field => $value){
             $whrCls[] = "`". $field . "` = :" . $field;
@@ -108,8 +108,8 @@ class Model
     }
 
     public function save($data){
-        $fields = [];
-        $values = [];
+        $fields = array();
+        $values = array();
 
         foreach($this->_describe as $field){
             if (isset($data[$field])){
