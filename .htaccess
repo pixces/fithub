@@ -1,0 +1,41 @@
+<IfModule mod_headers.c>
+Header set Connection keep-alive
+
+# Cache-control headers
+    # 2 HOURS
+    #<filesMatch "*">
+        Header set Cache-Control "max-age=7200, must-revalidate"
+    #</filesMatch>
+
+    # 480 weeks - 290304000
+    # 2 WEEKS
+    <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|swf)$">
+        Header set Cache-Control "max-age=1209600, public"
+    </filesMatch>
+
+    # 1 WEEK
+    <filesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=604800, public, must-revalidate"
+        #Header set Cache-Control "max-age=0, public, must-revalidate"
+    </filesMatch>
+
+    <filesMatch "\.(gif|jpg|png|ico|css|js|pdf|txt)$">
+        Header append Cache-Control "public"
+    </filesMatch>
+
+    <filesMatch "\.(js|css|xml|gz)$">
+        Header append Vary: Accept-Encoding
+    </filesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+    #The following line is enough for .js and .css
+    AddOutputFilter DEFLATE js css php
+
+    #The following line also enables compression by file content type, for the following list of Content-Type:s
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml
+
+    #The following lines are to avoid bugs with some browsers
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
