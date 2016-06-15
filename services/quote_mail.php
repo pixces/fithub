@@ -27,7 +27,6 @@ if($_POST){
         <h1>Quote Requested @ Fitouthub.com:</h1>
         <div>From: " . $senderName . " <" . $senderEmail . "></div>
         <div>Phone: " . $phone ." </div>
-        <div>" . $message . "</div>
     </body>
     </html>";
 

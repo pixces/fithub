@@ -67,8 +67,8 @@ $(document).ready(function(){
 
 	/* Partners Block */
 	 $(".partner_items").owlCarousel({
-		autoPlay: 3000, //Set AutoPlay to 3 seconds
-		items : 5,
+		autoPlay: 2000, //Set AutoPlay to 3 seconds
+		items : 4,
 		itemsDesktop : [1199,4],
 		itemsDesktopSmall : [979,3],
 		itemsTablet	: [768,2],
@@ -390,8 +390,8 @@ $(document).ready(function(){
 		} else if ( (!email) || !re.test(email) ){
 			errorText = "Enter a valid email address.";
 			error = true;
-		} else if (!phone){
-			errorText = "Phone number is mandatory to be filled.";
+		} else if ( (!phone) || isNaN(phone) ){
+			errorText = "Phone enter a valid phone number";
 			error = true;
 		} else if ( (!message) || (message.length < 15)) {
 			errorText = "Enter a poper message.";

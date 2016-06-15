@@ -214,7 +214,7 @@ button{
 
 /* Change the picture of the home background here */
 #slides_background_home .slides-container .img0{
-	background:url(../img/bg.jpg) center fixed ;
+	background:url("../img/bg.jpg") center fixed ;
 }
 
 #slides_background_home .slides-container .img1{
@@ -401,7 +401,6 @@ button{
 	font-size: 20px;
 	text-transform: uppercase;
 	color: #B2B2B2;
-
 }
 
 .introText span.heroText{
@@ -536,13 +535,13 @@ p.leadText{
 	font-weight: 400;
 	color: #ffffff;
 	margin-top: 0px;
-	font-size: 18px;
+	font-size: 22px;
 }
 
 
 .slider-content p{
 	color: #ffffff;
-	font-size: 15px;
+	font-size: 18px;
 	text-align: justify;
 	font-weight: 200;
 
@@ -3201,6 +3200,11 @@ div.jp-volume-bar-value {
 	margin: 12px 0;
 }
 
+.service_3 .service_p p{
+	font-size: 15px;
+	color: #9f9f9f;
+}
+
 .service_3 .service_right{
 	display: inline-block;
 	width: 70%;
@@ -4485,6 +4489,12 @@ video{
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
+	.introText span.smallText{
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #B2B2B2;
+	}
+
 	.owl-buttons{
 		display: none !important;
 	}
@@ -4642,7 +4652,7 @@ video{
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 720px) {
+@media only screen and (max-width : 720px) {
 
 	.introText span.smallText{
 		font-size: 20px;
@@ -4794,6 +4804,9 @@ video{
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.extra-top-50{
+		padding-top:150px !important;
+	}
 
 	/* home page */
 	h1.hero-announce{
@@ -4986,6 +4999,11 @@ video{
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+
+	.extra-top-50{
+		padding-top:150px;
+	}
+
 	.company_content_img_all{
 		float: initial;
 		width: 570px;
@@ -5045,7 +5063,6 @@ video{
 	}
 }
 
-
 @media screen and (min-width: 320px) and (max-width: 1120px){
 	video{
 		width:inherit !important;
@@ -5069,9 +5086,11 @@ video{
 		background:url("../img/pattern.png") repeat !important;
 	}
 }
+
 #mainbanner .slides_item1{
 	background:url(../img/image1.jpg) no-repeat top center / cover !important;
 }
+
 #mainbanner .slides_item2{
 	background:url(../img/image2.jpg) no-repeat top left / cover !important;
 }

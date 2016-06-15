@@ -14,14 +14,14 @@ Class Mailer{
             $mailConfig = $ini_parsed['mail'];
 
             $mail = new PHPMailer;
-            $mail->SMTPDebug = 2;
+            $mail->SMTPDebug = 0;
             $mail->isSMTP();
             $mail->SMTPAuth = true;
-            $mail->Host = $mailConfig['host'];
-            $mail->Username = $mailConfig['user'];
-            $mail->Password = $mailConfig['pass'];
-            $mail->SMTPSecure = $mailConfig['ssl'];
-            $mail->Port = $mailConfig['port'];
+            $mail->Host = 'a2ss28.a2hosting.com';
+            $mail->Username = 'enquiry@fitouthubme.com';
+            $mail->Password = 'Newmail123!';
+            $mail->SMTPSecure = "ssl";
+            $mail->Port = 465;
 
             $mail->addAddress($mailConfig['recepient_address'], $mailConfig['recepient_name']);
 
