@@ -24,7 +24,7 @@ if($_POST){
     <head>
     </head>
     <body>
-        <h1>Contact Mail @ Fitouthub.com:</h1>
+        <h2>Contact Mail @ Fitouthub.com:</h2>
         <div>From: " . $senderName . " <" . $senderEmail . "></div>
         <div>Phone: " . $phone ." </div>
         <div>" . $message . "</div>

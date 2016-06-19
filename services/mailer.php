@@ -24,6 +24,7 @@ Class Mailer{
             $mail->Port = 465;
 
             $mail->addAddress($mailConfig['recepient_address'], $mailConfig['recepient_name']);
+            $mail->addCC($mailConfig['cc_name']);
 
             self::$instance = $mail;
         }

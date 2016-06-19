@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Fitout Hub Interiors</title>
+		<title>Fitouthubme : Turnkey Fitout Solution Provider For Commercial And Residential Projects In Dubai.</title>
+		<meta name='keywords' content='Office Interior Design and Office Furniture in Dubai, best interiors dubai, Dubai furniture , interior fit out companies in dubai , interior fit out dubai ,Dubai office furniture, office fitout, interior decoration company, interior design firms in dubai, modern office furniture, interior fit out companies in uae, Office Interior, Commercial Interior Design, Interior Office Design,' />
+		<meta name='description' content='Fitout Hub Interiors having presence in Fitout interior solution of a decade, we have severed more than 1000 projects in Commercial and residential sectors which we proud of. Our unique design and on-time delivery made us to stand out of crowd. ' />
+
 		<!-- CSS Files
 			========================================================================= -->
 		<link href="css/reset.css" rel="stylesheet">
@@ -64,7 +67,7 @@
 								<div id="intro-form" class="col-lg-5 col-md-5 col-sm-12 item-column-content extra-top-50 text-center">
 									<!-- Register Form -->
 									<form class="quote_form" name="quote-form" class="row" method="post">
-										<h4 class="blink_me">contact us for a free quote!</h4>
+										<h4 class="blink_me" id="blinkText">Contact us for a free quote!</h4>
 										<div id="input_name" class="col-md-12">
 											<input id="quoteName" type="text" name="name" placeholder="Full Name" required="required">
 										</div>
@@ -518,51 +521,36 @@
 			</div>
 			<div class="section_content">
 				<div class="row partner_items">
-					<div>
-						<div class="client-item"><img src="images/clients/cl_acer.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_aearma.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_al-masah.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_alisons.png" alt="Partner"></div>
-					</div>
-					<div>
-						<div class="client-item"><img src="images/clients/cl_alnajah.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_aral.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_beauty.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_biofade.png" alt="Partner"></div>
-					</div>
-					<div>
-						<div class="client-item"><img src="images/clients/cl_cbi.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_compas.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_conser.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_delonghi.png" alt="Partner"></div>
-					</div>
-					<div>
-						<div class="client-item"><img src="images/clients/cl_edible.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_enolia.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_hilton.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_kansi.png" alt="Partner"></div>
-					</div>
-					<div>
-						<div class="client-item"><img src="images/clients/cl_lurpak.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_medispa.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_office.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_ontime.png" alt="Partner"></div>
-					</div>
-					<div>
-						<div class="client-item"><img src="images/clients/cl_orsay.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_prime.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_puca.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_pyramid.png" alt="Partner"></div>
-					</div>
-					<div>
-						<div class="client-item"><img src="images/clients/cl_rotana.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_sata.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_second_coffee.png" alt="Partner"></div>
-						<div class="client-item"><img src="images/clients/cl_swerve.png" alt="Partner"></div>
-					</div>
-					<div>
-						<div class="client-item"><img src="images/clients/cl_zulekha.png" alt="Partner"></div>
-					</div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_acer.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_aearma.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_al-masah.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_alisons.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_alnajah.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_aral.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_beauty.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_biofade.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_cbi.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_compas.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_conser.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_delonghi.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_edible.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_enolia.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_hilton.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_kansi.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_lurpak.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_medispa.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_office.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_ontime.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_orsay.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_prime.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_puca.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_pyramid.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_rotana.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_sata.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_second_coffee.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_swerve.png" alt="Partner"></div>
+					<div class="client-item"><img class="lazyOwl" data-src="images/clients/cl_zulekha.png" alt="Partner"></div>
+				</div>
 			</div>
 		</div>
 		</section>
@@ -592,7 +580,7 @@
 								</div>
 								<div class="row contact_form_phone_block">
 									<div class="col-md-12">
-										<input type="number" class="conact_form_phone" name="phone" id="phone" placeholder="Phone Number" required/>
+										<input type="text" class="conact_form_phone" name="phone" id="phone" placeholder="Phone Number" required/>
 									</div>
 								</div>
 								<div class="contact_form_message_block">
@@ -782,6 +770,15 @@
 					animation: "fadeInUp",
 					separator: ",",
 					speed: 5000,
+					complete: function () {
+						// Called after the entrance animation is executed.
+					}
+				});
+				/* text rotator */
+				$("#blinkText").Morphext({
+					animation: "flash",
+					separator: ",",
+					speed: 1000,
 					complete: function () {
 						// Called after the entrance animation is executed.
 					}

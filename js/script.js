@@ -66,14 +66,16 @@ $(document).ready(function(){
 	
 
 	/* Partners Block */
-	 $(".partner_items").owlCarousel({
-		autoPlay: 2000, //Set AutoPlay to 3 seconds
-		items : 4,
+	$(".partner_items").owlCarousel({
+		autoPlay: 1500, //Set AutoPlay to 3 seconds
+		items : 5,
 		itemsDesktop : [1199,4],
 		itemsDesktopSmall : [979,3],
 		itemsTablet	: [768,2],
 		navigation : false,
-		pagination : false
+		pagination : false,
+		scrollPerPage: true,
+		lazyLoad : true
 	});
 
 	// GOOGLE MAPS
@@ -438,7 +440,7 @@ $(document).ready(function(){
 		} else if ( (!email) || !re.test(email) ){
 			errorText = "Enter a valid email address.";
 			error = true;
-		} else if (!phone){
+		} else if ( (!phone) || isNaN(phone) ){
 			errorText = "Phone number is mandatory to be filled.";
 			error = true;
 		}
@@ -456,7 +458,7 @@ $(document).ready(function(){
 		  url: "services/quote_mail.php",
 		  data: dataString,  
 		  success: function() { 
-			$('.quote_form').html("<div class='contact_message text_color'>Quote Submitted! We will get back to you soon.</div>");
+			$('.quote_form').html("<div class='contact_message text_color'>Thank you ! We will get back to you soon.</div>");
 			  
 		  }
 		});  

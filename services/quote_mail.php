@@ -24,7 +24,7 @@ if($_POST){
     <head>
     </head>
     <body>
-        <h1>Quote Requested @ Fitouthub.com:</h1>
+        <h2>Quote Requested @ Fitouthub.com:</h2>
         <div>From: " . $senderName . " <" . $senderEmail . "></div>
         <div>Phone: " . $phone ." </div>
     </body>

@@ -5094,3 +5094,7 @@ video{
 #mainbanner .slides_item2{
 	background:url(../img/image2.jpg) no-repeat top left / cover !important;
 }
+
+.blink_me{
+	color: #ec9c35;
+}
